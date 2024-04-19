@@ -39,7 +39,7 @@ function startGame() {
 startBtnNode.addEventListener("click", startGame)
 
 gameBoxNode.addEventListener("click", () => {
-  console.log("intentando hacer que el pollito salte")
+  // console.log("intentando hacer que el pollito salte")
   game.pollito.jumpEffect()
 })
 

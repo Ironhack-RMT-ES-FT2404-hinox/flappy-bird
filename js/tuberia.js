@@ -14,7 +14,7 @@ class Tuberia {
 
     gameBoxNode.append(this.node)
 
-    this.x = gameBoxNode.offsetWidth - 60;
+    this.x = gameBoxNode.offsetWidth;
     this.y = posY;
     this.w = 60;
     this.h = 250;

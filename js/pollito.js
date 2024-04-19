@@ -30,21 +30,29 @@ class Pollito {
     // velocidad salto
     this.jumpSpeed = 30;
 
+    // this.node.style.transition = "transform 0.1s"
   }
 
   //todo efecto de gravedad del pollito
   gravityEffect() {
-    this.y += this.gravitySpeed
-    // console.log(this.y)
-    //! SIEMPRE QUE MODIFIQUEMOS POSICION, TAMAÑO, COLOR, DISTANCIA, IMG TENEMOS QUE MODIFICAR EL NODO.
-    this.node.style.top = `${this.y}px`
+    if ((this.y + this.h) < gameBoxNode.offsetHeight) {
+      this.y += this.gravitySpeed
+      // console.log(this.y)
+      //! SIEMPRE QUE MODIFIQUEMOS POSICION, TAMAÑO, COLOR, DISTANCIA, IMG TENEMOS QUE MODIFICAR EL NODO.
+      this.node.style.top = `${this.y}px`
+      // this.node.style.transform = "rotate(45deg)"
+    }
   }
 
   //todo efecto de salto del pollito
   jumpEffect() {
 
-    this.y -= this.jumpSpeed;
-    this.node.style.top = `${this.y}px`
+    if (this.y > 0) {
+      this.y -= this.jumpSpeed;
+      this.node.style.top = `${this.y}px`
+
+      // this.node.style.transform = "rotate(-45deg)"
+    }
 
   }
 
