@@ -1,18 +1,23 @@
 class Tuberia {
 
-  constructor() {
+  constructor(type, posY) {
 
     this.node = document.createElement("img")
     this.node.id = "tuberia"
 
-    this.node.src = "./images/obstacle_top.png" //! esto cambiará
+    // console.log(type)
+    if (type === "arriba") {
+      this.node.src = "./images/obstacle_top.png"
+    } else if (type === "abajo") {
+      this.node.src = "./images/obstacle_bottom.png"
+    }
 
     gameBoxNode.append(this.node)
 
     this.x = gameBoxNode.offsetWidth - 60;
-    this.y = 0;
+    this.y = posY;
     this.w = 60;
-    this.h = 150;
+    this.h = 250;
 
     this.node.style.position = "absolute";
     this.node.style.top = `${this.y}px`;

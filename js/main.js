@@ -27,6 +27,7 @@ function startGame() {
   game = new Game()
   console.log(game)
   game.start()
+  game.iniciarFrecuenciaDeTuberias()
 
 }
 
